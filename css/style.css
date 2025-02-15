@@ -798,7 +798,7 @@ footer {
 
 /* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
 
-@media only screen and (max-width: 540px){
+@media only screen and (max-width: 440px){
     .featured-name{
         font-size: 40px;
     }
@@ -810,5 +810,15 @@ footer {
     }
     .input-field{
         width: 100%;
+    }
+    .middle-footer .footer-menu {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align */
+        gap: 10px; /* Reduce spacing */
+    }
+
+    .footer_menu_list a {
+        margin-inline: 0; /* Remove inline margins */
+        font-size: 18px; /* Slightly larger text for better readability */
     }
 }
