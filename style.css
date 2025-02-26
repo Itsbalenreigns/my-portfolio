@@ -635,73 +635,88 @@ textarea{
 
 /* ----- FOOTER BOX ----- */
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    row-gap: 30px;
-    background: lightgray;
-    padding-block: 40px 60px;
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
 }
 
+/* Top Footer */
 .top-footer p {
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.middle-footer .footer-menu {
-    display: flex;
-    justify-content: center;  /* Centering menu */
-    gap: 20px;
+/* Middle Footer - Navigation */
+.middle-footer {
+    margin: 10px 0;
 }
 
-.footer_menu_list {
+.footer-menu {
     list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
-.footer_menu_list a {
+.footer-menu a {
+    color: #fff;
     text-decoration: none;
-    color: var(--text-color-second);
-    font-weight: 500;
-    margin-inline: 20px;
-    transition: color 0.3s ease;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
 }
 
-.footer_menu_list a:hover {
-    color: var(--primary-color); /* Change color on hover */
+.footer-menu a:hover {
+    color: #00bcd4; /* Highlight color */
 }
 
+/* Social Icons */
 .footer-social-icons {
     display: flex;
-    justify-content: center;  /* Centers icons */
-    gap: 30px;
-}
-
-.icon {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    background: #fff;
-    border-radius: 50%;
-    transition: 0.3s ease;
-    cursor: pointer;
+    gap: 12px;
+    margin-top: 10px;
 }
 
 .icon i {
     font-size: 20px;
-    color: var(--second-color);
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.icon:hover {
-    background: lightgrey; /* Change background on hover */
+.icon:hover i {
+    color: #00bcd4;
+    transform: scale(1.1);
 }
 
+/* Bottom Footer */
 .bottom-footer {
-    font-size: 14px;
-    margin-top: 10px;
-    text-align: center; /* Ensures it is centered */
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.bottom-footer a {
+    color: #00bcd4;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 420px) {
+    .footer-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .footer-social-icons {
+        gap: 8px;
+    }
+
+    .icon i {
+        font-size: 18px;
+    }
 }
 
 
